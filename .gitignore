@@ -1,0 +1,6 @@
+/target/
+/node_modules/
+*.tgz
+/npm/bin/lookoutside-*
+!/npm/bin/lookoutside.js
+.DS_Store

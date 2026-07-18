@@ -1,0 +1,33 @@
+{
+  "name": "lookoutside",
+  "version": "0.1.0",
+  "description": "Look outside from your terminal with automatic local weather",
+  "license": "MIT",
+  "bin": {
+    "lookoutside": "npm/bin/lookoutside.js"
+  },
+  "files": [
+    "npm/bin/",
+    "src/",
+    "Cargo.toml",
+    "Cargo.lock",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "cargo build --release",
+    "stage": "node scripts/stage-binary.mjs",
+    "prepack": "cargo build --release && node scripts/stage-binary.mjs",
+    "test": "cargo test && cargo clippy --all-targets -- -D warnings"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "weather",
+    "cli",
+    "rust",
+    "npx",
+    "forecast"
+  ]
+}
