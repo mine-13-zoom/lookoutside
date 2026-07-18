@@ -74,6 +74,11 @@ jobs:
       - name: Verify staged binaries
         run: ls -l npm/bin/
 
+      # actions/download-artifact@v4 does not preserve the executable bit.
+      # Restore 0o755 so the Node launcher can spawnSync the Rust binaries.
+      - name: Restore executable permissions
+        run: chmod +x npm/bin/lookoutside-* && ls -l npm/bin/
+
       # --ignore-scripts skips the "prepack" cargo build; binaries are already
       # staged for every platform by the build jobs. Authentication happens via
       # OIDC trusted publishing (id-token: write above) — no NPM_TOKEN needed.
