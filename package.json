@@ -1,8 +1,16 @@
 {
   "name": "lookoutside",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Look outside from your terminal with automatic local weather",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mine-13-zoom/lookoutside.git"
+  },
+  "homepage": "https://github.com/mine-13-zoom/lookoutside",
+  "bugs": {
+    "url": "https://github.com/mine-13-zoom/lookoutside/issues"
+  },
   "bin": {
     "lookoutside": "npm/bin/lookoutside.js"
   },
